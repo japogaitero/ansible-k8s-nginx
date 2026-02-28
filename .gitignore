@@ -1,0 +1,15 @@
+# Virtual Environment 
+venv/
+.venv/
+env/
+
+# Temp python files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code Configuration 
+.vscode/
+
+# Ansible Logs
+*.log

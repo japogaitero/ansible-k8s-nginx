@@ -1,0 +1,10 @@
+---
+- name: Cleanup Kubernetes Environment
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Remove the project namespace and all associated resources
+      kubernetes.core.k8s:
+        name: portfolio-nginx
+        kind: Namespace
+        state: absent
