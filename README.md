@@ -43,3 +43,14 @@ Instead of manual configurations, this project uses Ansible playbooks to:
    ansible-playbook cleanup.yml
 
 Developed as part of my DevOps Portfolio.
+
+## 🛡️ Advanced Features
+
+### High Availability (HA) & Scalability
+The deployment is configured to maintain **3 replicas** of the Nginx server. This ensures that the application can handle more traffic and remains available even if one instance fails.
+
+### Self-Healing
+Kubernetes constantly monitors the state of the pods. If a pod is manually deleted or crashes, the **Deployment controller** automatically provisions a new one to maintain the desired state of 3 replicas.
+
+### Load Balancing
+The **Kubernetes Service** acts as a single entry point (Port 30080), automatically distributing incoming traffic among all healthy pods.

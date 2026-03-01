@@ -48,7 +48,7 @@
             name: nginx-server
             namespace: portfolio-nginx
           spec:
-            replicas: 1
+            replicas: 3
             selector:
               matchLabels:
                 app: portfolio-web
